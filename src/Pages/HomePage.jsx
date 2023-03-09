@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
+import React, {useEffect} from 'react'
 import NewsList from '../Components/NewsList/NewsList';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchNewsList } from '../redux/slices/NewsSlice';
