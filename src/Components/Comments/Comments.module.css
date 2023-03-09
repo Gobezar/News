@@ -1,0 +1,18 @@
+.commentItem {
+    font-size: 20px;
+    margin: 5px;
+   
+}
+
+.commentItemList {
+    margin: 30px;
+    width: 90%;
+}
+
+.commentItemText {
+    font-style: italic;
+    font-size: 16px;
+}
+.commentItemUser {
+    font-weight: bold;
+}

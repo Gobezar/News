@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.loadingText {
+    font-family: 'Unbounded';
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reboot {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.rebootButton {
+    width: 350px;
+    height: 45px;
+    background-color: #EFE529;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.rebootButton:hover {
+    background-color: #f8bf04 !important;
+}
+
+.Loader {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

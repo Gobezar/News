@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.title {
+    font-family: 'Unbounded';
+    font-weight: 500;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 70px;
+    color: black;
+}
+
+.newsItem_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+}
