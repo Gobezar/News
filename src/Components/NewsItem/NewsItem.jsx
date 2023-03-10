@@ -1,8 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'antd';
+import { getFormatedUnixDate } from '../../helpers/data';
+
 import styles from "./NewsItem.module.css"
-import {getFormatedUnixDate} from '../../helpers/data';
 
 export const NewsItem = ({ newsItem }) => {
   const navigate = useNavigate()

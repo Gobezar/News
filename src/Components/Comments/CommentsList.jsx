@@ -1,9 +1,7 @@
 import React from 'react'
 import styles from './Comments.module.css'
 
-const CommentsList = ({userName, commentText, date}) => {
-
-
+const CommentsList = ({ userName, commentText, date }) => {
 
   return (
     <div className={styles.commentItemList}>
@@ -16,4 +14,4 @@ const CommentsList = ({userName, commentText, date}) => {
   )
 }
 
-export default CommentsList
+export default CommentsList;

@@ -1,12 +1,12 @@
 import React from 'react'
 import { useDispatch } from "react-redux";
-import {setCurrentPage} from '../../redux/slices/PaginationSlice'
+import { setCurrentPage } from '../../redux/slices/PaginationSlice'
 import { setPageSize } from '../../redux/slices/PaginationSlice';
 
-import {Pagination} from 'antd'
+import { Pagination } from 'antd'
 import './Paginator.css'
 
-const Paginator = ({currentPage, pageSize, totalCount}) => {
+const Paginator = ({ currentPage, pageSize, totalCount }) => {
 
     const dispatch = useDispatch()
 
@@ -16,7 +16,7 @@ const Paginator = ({currentPage, pageSize, totalCount}) => {
 
     const changeSizeShow = (_, size) => {
         dispatch(setPageSize(size))
-        }
+    }
 
     return (
         <div
@@ -27,9 +27,9 @@ const Paginator = ({currentPage, pageSize, totalCount}) => {
                 onChange={onPageChange}
                 defaultCurrent={1}
                 onShowSizeChange={changeSizeShow}
-                total={totalCount}/>
+                total={totalCount} />
         </div>
     )
 }
 
-export default Paginator
+export default Paginator;

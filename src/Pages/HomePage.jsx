@@ -1,19 +1,15 @@
-import React, {useEffect} from 'react'
-import NewsList from '../Components/NewsList/NewsList';
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchNewsList } from '../redux/slices/NewsSlice';
 import { usePageNews } from '../hooks/usePageNews';
-import Loader from '../UI/Navbar/Loader/Loader';
+import { useInterval } from '../hooks/useInterval';
+import { fetchNewsList } from '../redux/slices/NewsSlice';
+import NewsList from '../Components/NewsList/NewsList';
+import Loader from '../UI/Loader/Loader';
 import Paginator from '../Components/Pagination/Pagination';
-
-
-
 
 import { SearchOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import "../Styles/global.css"
-
-
 
 
 const Home = () => {
@@ -23,26 +19,23 @@ const Home = () => {
   const totalCountNews = useSelector((state) => state.pagination.totalCountNews)
   const pageSize = useSelector((state) => state.pagination.pageSize)
   const { news, statusNews } = useSelector((state) => state.news)
-
   const currentPageNews = usePageNews(currentPage, pageSize, news)
-
 
 
   const rebootNewsList = () => {
     dispatch(fetchNewsList())
     window.scrollTo(0, 0)
   }
-  
+
+  useInterval(60000, rebootNewsList)
 
   useEffect(() => {
     rebootNewsList()
   }, [])
 
 
-
   return (
     <>
-
       {statusNews === 'error'
         ? <h3 className='loadingText'>Не удалось получить данные с сервера :( </h3>
         : <div> {statusNews === 'loading'
@@ -55,11 +48,8 @@ const Home = () => {
         <Button className='rebootButton' type="primary" onClick={rebootNewsList} icon={<SearchOutlined />}>Обновить новостную ленту</Button>
       </div>
       <Paginator currentPage={currentPage} pageSize={pageSize} totalCount={totalCountNews} />
-
-
-
-
     </>
   )
 }
-export default Home
+
+export default Home;

@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 
 const initialState = {
@@ -9,8 +9,7 @@ const initialState = {
 }
 
 
-
-const paginationSlice = createSlice ({
+const paginationSlice = createSlice({
     name: 'pagination',
     initialState,
     reducers: {
@@ -18,11 +17,11 @@ const paginationSlice = createSlice ({
             state.currentPage = action.payload;
             window.scrollTo(0, 0)
         },
-        setPageSize(state, action){
-            state.pageSize = action.payload           
+        setPageSize(state, action) {
+            state.pageSize = action.payload
         }
     }
 })
 
-export const {setCurrentPage, setPageSize} = paginationSlice.actions;
+export const { setCurrentPage, setPageSize } = paginationSlice.actions;
 export default paginationSlice.reducer

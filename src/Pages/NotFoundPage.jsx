@@ -6,4 +6,4 @@ const NotFound = () => {
     <div className='loadingText'>Данная страница не найдена :( </div>
   )
 }
-export default NotFound
+export default NotFound;
