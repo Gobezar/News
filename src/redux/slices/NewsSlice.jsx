@@ -29,7 +29,7 @@ const initialState = {
 
 
 const NewsSlice = createSlice({
-  name: 'pagination',
+  name: 'news',
   initialState,
   reducers: {
 
